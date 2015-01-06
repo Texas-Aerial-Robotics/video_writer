@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="video_writer" type="video_writer" name="video_writer" output="screen" respawn="false">
+        <param name="input_topic" value="$(arg input_topic)" />
+        <param name="output_file" value="$(arg output_file)" />
+        <param name="frame_rate" type="double" value="10.0" />
+        <param name="fourcc" type="string" value="XVID" />
+        <!-- use convert for videos from motion detection -->
+        <param name="convert" type="bool" value="true" />
+        <!--param name="encoding" type="string" value="rgb8" /-->
+    </node>
+</launch>
